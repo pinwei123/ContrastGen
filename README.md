@@ -1,0 +1,56 @@
+# ContrastGen: Conditional 3D Contrast-Enhanced CT Synthesis
+
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Framework](https://img.shields.io/badge/Framework-PyTorch-red.svg)
+![Task](https://img.shields.io/badge/Task-3D_Medical_Image_Synthesis-blue.svg)
+
+**ContrastGen** is a state-of-the-art **3D Conditional Diffusion Model** designed to synthesize Contrast-Enhanced CT (CECT) volumes from Non-Contrast CT (NCCT) inputs. The project aims to reduce the need for contrast agents in medical imaging by learning the non-linear mapping between NCCT and CECT scans.
+
+## 🚀 Project Introduction
+
+This project implements a **Conditional Gaussian Diffusion Model** tailored for 3D volumetric data. By conditioning the diffusion process on an input NCCT scan, the model generates a corresponding high-fidelity CECT scan.
+
+The codebase is built on **PyTorch** and optimized for **NIfTI (.nii/.nii.gz)** medical image formats. It includes a complete pipeline for data loading, preprocessing, conditional training, and multi-GPU distribution.
+
+## ✨ Key Features
+
+| Feature | Description | Implementation Source |
+| :--- | :--- | :--- |
+| **3D Conditional Diffusion** | Uses `GaussianDiffusion` conditioned on input volumes to guide generation. | `diffusion_model/trainer.py` |
+| **3D U-Net Architecture** | Employes a specialized 3D U-Net backbone for volumetric noise prediction. | `diffusion_model/unet.py` |
+| **NIfTI Data Pipeline** | Custom `Dataset` handling `.nii` files, resizing, and normalization. | `dataset.py` (Class: `NiftiPairImageGenerator`) |
+| **3D Augmentation** | Supports on-the-fly 3D augmentation (Flip, Gamma, Noise) using `torchio`. | `dataset.py` |
+| **Distributed Training** | Built-in support for `nn.DataParallel` for multi-GPU setups. | `train.py` |
+
+## 📂 Data Structure
+
+The training script expects paired data in separate folders. Files must be named such that sorting them results in correct input-target pairs.
+
+text
+/dataset/
+├── data/
+│   ├── cacs/          # Input: Non-Contrast CT (NCCT)
+│   ├── cas/           # Target: Contrast-Enhanced CT (CECT)
+│   ├── cacs_test/     # Validation Input
+│   └── cas_test/      # Validation Target
+└── ...
+
+## 🛠️ Getting Started
+Prerequisites
+Python 3.8+
+
+PyTorch (with CUDA support)
+
+Dependencies: nibabel, torchio, numpy, scikit-learn, tqdm
+
+Installation
+Clone the repository:
+
+
+bash
+git clone [https://github.com/pinwei123/ContrastGen.git](https://github.com/pinwei123/ContrastGen.git)
+cd ContrastGen
+Install dependencies:
+
+bash
+pip install torch torchvision nibabel torchio scikit-learn
