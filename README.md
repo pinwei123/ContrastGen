@@ -67,4 +67,4 @@ python train.py \
 ```
 ### 🤝 Customization (Dataset)
 
-> **The `dataset.py` is designed for easy modification** to accommodate different data preparation or augmentation strategies without touching the core diffusion model logic.
+**The `dataset.py` is designed for easy modification** to accommodate different data preparation or augmentation strategies without touching the core diffusion model logic.
