@@ -11,6 +11,17 @@ This project implements a **Conditional Gaussian Diffusion Model** tailored for 
 
 The codebase is built on **PyTorch** and optimized for **NIfTI (.nii/.nii.gz)** medical image formats. It includes a complete pipeline for data loading, preprocessing, conditional training, and multi-GPU distribution.
 
+<div align="center">
+  <iframe 
+    width="560" 
+    height="315" 
+    src="https://youtu.be/ClzFtFkfiZM" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+
 ## 📂 Data Structure
 
 The training script expects paired data in separate folders. Files must be named such that sorting them results in correct input-target pairs.
