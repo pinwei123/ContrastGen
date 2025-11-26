@@ -25,7 +25,7 @@ The codebase is built on **PyTorch** and optimized for **NIfTI (.nii/.nii.gz)** 
 
 The training script expects paired data in separate folders. Files must be named such that sorting them results in correct input-target pairs.
 
-text
+```text
 /dataset/
 ├── data/
 │   ├── cacs/          # Input: Non-Contrast CT (NCCT)
@@ -33,23 +33,28 @@ text
 │   ├── cacs_test/     # Validation Input
 │   └── cas_test/      # Validation Target
 └── ...
-
+```
 ## 🛠️ Getting Started
-Prerequisites
-Python 3.8+
+### Prerequisites
 
-PyTorch (with CUDA support)
+* Python **3.x**
+* **PyTorch** and **torchvision**
+* Necessary medical imaging libraries (`nibabel`, `torchio`)
+* Scientific computing libraries (`numpy`, `scikit-learn`)
 
-Dependencies: nibabel, torchio, numpy, scikit-learn, tqdm
+### Installation
 
-Installation
-Clone the repository:
+1.  **Clone the Repository:**
+    ```bash
+    git clone [https://github.com/pinwei123/ContrastGen.git](https://github.com/pinwei123/ContrastGen.git)
+    cd ContrastGen
+    ```
 
-
-bash
-git clone [https://github.com/pinwei123/ContrastGen.git](https://github.com/pinwei123/ContrastGen.git)
-cd ContrastGen
-Install dependencies:
-
-bash
-pip install torch torchvision nibabel torchio scikit-learn
+2.  **Install Dependencies:**
+    A `requirements.txt` file is required for this step, but assuming common dependencies:
+    ```bash
+    # It is highly recommended to use a virtual environment
+    pip install torch torchvision numpy scikit-learn nibabel torchio
+    # You might also need the custom diffusion model packages:
+    # pip install -e .  (If package is installable)
+    ```
