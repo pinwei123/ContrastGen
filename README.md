@@ -37,11 +37,11 @@ The training script expects paired data in separate folders. Files must be named
 1.  **Clone the Repository:**
     ```bash
     git clone [https://github.com/pinwei123/ContrastGen.git](https://github.com/pinwei123/ContrastGen.git)
-    cd ContrastGen
     ```
 
 2.  **Install Dependencies:**
     ```bash
+    cd ContrastGen
     pip install -r requirements.txt
     ```
 ## ⚙️ Training Guide
