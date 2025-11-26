@@ -1,6 +1,5 @@
 # ContrastGen: Conditional 3D Contrast-Enhanced CT Synthesis
 
-![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Framework](https://img.shields.io/badge/Framework-PyTorch-red.svg)
 ![Task](https://img.shields.io/badge/Task-3D_Medical_Image_Synthesis-blue.svg)
 
