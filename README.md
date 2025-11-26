@@ -51,12 +51,8 @@ The training script expects paired data in separate folders. Files must be named
     ```
 
 2.  **Install Dependencies:**
-    A `requirements.txt` file is required for this step, but assuming common dependencies:
     ```bash
-    # It is highly recommended to use a virtual environment
-    pip install torch torchvision numpy scikit-learn nibabel torchio
-    # You might also need the custom diffusion model packages:
-    # pip install -e .  (If package is installable)
+    pip install -r requirements.txt
     ```
 ## ⚙️ Training Guide
 
