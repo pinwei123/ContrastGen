@@ -58,20 +58,6 @@ The training script expects paired data in separate folders. Files must be named
 
 The training script `train.py` is configured to run the diffusion model trainer using a comprehensive set of command-line arguments.
 
-### Key Configuration Arguments
-
-| Argument | Type | Default Value | Description |
-| :--- | :--- | :--- | :--- |
-| `--inputfolder` | `str` | `/dataset/data/cacs` | Path to the training NCCT images. |
-| `--targetfolder` | `str` | `/dataset/data/cas` | Path to the training CECT images. |
-| `--input_size` | `int` | `128` | Image height/width after resizing (X and Y dimensions). |
-| `--depth_size` | `int` | `128` | Image depth after resizing (Z dimension). |
-| `--timesteps` | `int` | `250` | Number of diffusion timesteps. |
-| `--epochs` | `int` | `50000` | Total number of training steps (iterations). |
-| `--batchsize` | `int` | `2` | Batch size for training. |
-| `--with_condition` | `action`| `False` | **Must be set** to enable conditional generation (using NCCT as input). |
-| `-r` / `--resume_weight` | `str` | `""` | Path to a checkpoint for resuming training. |
-
 ### Execution
 
 To train the conditional diffusion model, you **must** include the `--with_condition` flag and ensure the input/target paths are correctly set.
