@@ -11,16 +11,6 @@ This project implements a **Conditional Gaussian Diffusion Model** tailored for 
 
 The codebase is built on **PyTorch** and optimized for **NIfTI (.nii/.nii.gz)** medical image formats. It includes a complete pipeline for data loading, preprocessing, conditional training, and multi-GPU distribution.
 
-## ✨ Key Features
-
-| Feature | Description |
-| :--- | :--- |
-| **3D Conditional Diffusion** | Uses `GaussianDiffusion` conditioned on input volumes to guide generation. |
-| **3D U-Net Architecture** | Employes a specialized 3D U-Net backbone for volumetric noise prediction. | 
-| **NIfTI Data Pipeline** | Custom `Dataset` handling `.nii` files, resizing, and normalization. | 
-| **3D Augmentation** | Supports on-the-fly 3D augmentation (Flip, Gamma, Noise) using `torchio`. | 
-| **Distributed Training** | Built-in support for `nn.DataParallel` for multi-GPU setups. | 
-
 ## 📂 Data Structure
 
 The training script expects paired data in separate folders. Files must be named such that sorting them results in correct input-target pairs.
