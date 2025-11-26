@@ -1,9 +1,9 @@
-# ContrastGen: Conditional 3D Contrast-Enhanced CT Synthesis
+# ContrastGen
 
 ![Framework](https://img.shields.io/badge/Framework-PyTorch-red.svg)
 ![Task](https://img.shields.io/badge/Task-3D_Medical_Image_Synthesis-blue.svg)
 
-**ContrastGen** is a state-of-the-art **3D Conditional Diffusion Model** designed to synthesize Contrast-Enhanced CT (CECT) volumes from Non-Contrast CT (NCCT) inputs. The project aims to reduce the need for contrast agents in medical imaging by learning the non-linear mapping between NCCT and CECT scans.
+**ContrastGen** is a **3D Conditional Diffusion Model** designed to synthesize Contrast-Enhanced CT (CECT) volumes from Non-Contrast CT (NCCT) inputs. The project aims to reduce the need for contrast agents in medical imaging by learning the non-linear mapping between NCCT and CECT scans.
 
 ## 🚀 Project Introduction
 
@@ -92,6 +92,3 @@ python train.py \
 ### 🤝 Customization (Dataset)
 
 > **The `dataset.py` is designed for easy modification** to accommodate different data preparation or augmentation strategies without touching the core diffusion model logic.
-
-* **`NiftiPairImageGenerator`**: This class handles the paired Non-Contrast CT (NCCT) and Contrast-Enhanced CT (CECT) data loading.
-* **Custom Augmentation**: Users can easily modify or extend the `self.augment_transform` within the `NiftiPairImageGenerator` class to incorporate more sophisticated **3D augmentation techniques** (e.g., `tio.RandomAffine`, `tio.RandomElasticDeformation`).
