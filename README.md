@@ -13,13 +13,13 @@ The codebase is built on **PyTorch** and optimized for **NIfTI (.nii/.nii.gz)** 
 
 ## ✨ Key Features
 
-| Feature | Description | Implementation Source |
-| :--- | :--- | :--- |
-| **3D Conditional Diffusion** | Uses `GaussianDiffusion` conditioned on input volumes to guide generation. | `diffusion_model/trainer.py` |
-| **3D U-Net Architecture** | Employes a specialized 3D U-Net backbone for volumetric noise prediction. | `diffusion_model/unet.py` |
-| **NIfTI Data Pipeline** | Custom `Dataset` handling `.nii` files, resizing, and normalization. | `dataset.py` (Class: `NiftiPairImageGenerator`) |
-| **3D Augmentation** | Supports on-the-fly 3D augmentation (Flip, Gamma, Noise) using `torchio`. | `dataset.py` |
-| **Distributed Training** | Built-in support for `nn.DataParallel` for multi-GPU setups. | `train.py` |
+| Feature | Description |
+| :--- | :--- |
+| **3D Conditional Diffusion** | Uses `GaussianDiffusion` conditioned on input volumes to guide generation. |
+| **3D U-Net Architecture** | Employes a specialized 3D U-Net backbone for volumetric noise prediction. | 
+| **NIfTI Data Pipeline** | Custom `Dataset` handling `.nii` files, resizing, and normalization. | 
+| **3D Augmentation** | Supports on-the-fly 3D augmentation (Flip, Gamma, Noise) using `torchio`. | 
+| **Distributed Training** | Built-in support for `nn.DataParallel` for multi-GPU setups. | 
 
 ## 📂 Data Structure
 
